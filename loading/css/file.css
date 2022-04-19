@@ -1,0 +1,52 @@
+body{
+ background: black;
+}
+
+.loading0 {
+	 width: 200px;
+	 height: 200px;
+	 border: 5px solid black;
+	 border-top-color: magenta;
+	 border-radius: 50%;
+	 animation: spin 1s linear infinite;
+
+}
+
+@keyframes spin{
+	to{
+		transform: rotate(360deg);
+	}
+}
+
+.loading1 {
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+}
+
+.loading1 .dots {
+ width: 20px;
+ height: 20px;
+ border-radius: 50%;
+ margin: 10px;
+ display: inline-block;
+ background-color: #fff;
+ transform: scale(0.2);
+ animation: anim 1.2s infinite;
+}
+
+.dots:nth-child(2){animation-delay:0.2s}
+.dots:nth-child(3){animation-delay:0.4s}
+.dots:nth-child(4){animation-delay:1s}
+.dots:nth-child(5){animation-delay:1.2s}
+
+@keyframes anim{
+	0%,100% {
+		transform: scale(0.2);
+	}
+	50%{
+		transform: scale(1);
+	}
+}
+
